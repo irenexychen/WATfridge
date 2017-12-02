@@ -1,4 +1,4 @@
-import java.util.*;
+/*import java.util.*;
 
 class SortByFoodGroup implements Comparator<Food> {
 	public int compare(Food food1, Food food2) {
@@ -82,4 +82,4 @@ public class SortList {
 		System.out.println("Sorted by food group:");//alphabetical order of groups
 		printList(foodList);
 	}
-}
+}*/
