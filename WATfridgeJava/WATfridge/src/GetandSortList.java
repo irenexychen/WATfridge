@@ -77,6 +77,12 @@ public class GetandSortList {
 			foo.timeInFridge = myScanner.nextInt();
 			myScanner.nextLine();
 			
+			System.out.println("Expiry date (yyyy/mm/dd):");
+			String date = myScanner.nextLine();
+			foo.expiryDate.year = Integer.parseInt(date.substring(0,4));
+			foo.expiryDate.month = Integer.parseInt(date.substring(5,7));
+			foo.expiryDate.day = Integer.parseInt(date.substring(8,10));
+			
 			System.out.println("Food group: (Fruits, Vegetable, Dairy, Protein, Grains, Other):");
 			foo.foodGroup = myScanner.nextLine();
 			
