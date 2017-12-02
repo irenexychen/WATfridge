@@ -1,12 +1,17 @@
 package fresh_geese.watfridge;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
+import android.widget.Button;
+
 
 
 /**
@@ -59,22 +64,41 @@ public class foodFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-        final Button calendarButton = findViewById(R.id.calendarIcon);
-        button.setOnClickListener(new View.OnClickListener()){
+        final Button calendarButton = (Button) getView().findViewById(R.id.calendarIcon);
+        calendarButton.setOnClickListener(new View.OnClickListener(){
+            @Override
             public void onClick(View v){
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                DatePicker picker = new DatePicker(getActivity());
+                picker.setCalendarViewShown(false);
+
+                builder.setTitle("Date bought");
+                builder.setView(picker);
+                builder.setCancelable(false);
+                builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        ///TODO pass back date that they picked.
+                    }
+                });
+
+                builder.show();
+                /*
                 public void showDatePickerDialog(View v) {
-                    DialogFragment newFragment = new DatePickerFragment();
+                    DialogFragment newFragment = new CalendarFragment();
                     newFragment.show(getSupportFragmentManager(), "datePicker");
-                }
+                }*/
 
             }
-        }
+        });
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_food, container, false);
     }
 

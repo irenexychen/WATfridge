@@ -7,7 +7,7 @@ import android.app.DialogFragment;
  */
 
 
-
+/*
 public static class calendarFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 
     @Override
@@ -27,3 +27,4 @@ public static class calendarFragment extends DialogFragment implements DatePicke
     }
 }
 
+*/

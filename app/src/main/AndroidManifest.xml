@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".configActivity" />
         <activity android:name=".calendarActivity" />
+
         <activity android:name=".recipesActivity"></activity>
     </application>
 

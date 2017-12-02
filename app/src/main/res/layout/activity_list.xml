@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,6 +10,7 @@
     tools:context="fresh_geese.watfridge.listActivity">
 
     <android.support.design.widget.BottomNavigationView
+
         android:id="@+id/navigation"
         android:layout_width="0dp"
         android:layout_height="76dp"
@@ -21,12 +23,100 @@
         app:menu="@menu/navigation" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/addFoodButton"
         android:layout_width="54dp"
         android:layout_height="52dp"
         android:visibility="visible"
         app:srcCompat="@android:drawable/ic_input_add"
         tools:layout_editor_absoluteX="314dp"
-        tools:layout_editor_absoluteY="366dp" />
+        tools:layout_editor_absoluteY="366dp"
+        />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        tools:context="fresh_geese.watfridge.foodFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Enter Food"
+                android:textAppearance="@*android:style/TextAppearance.Leanback.FormWizard.Medium" />
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:text="Save option"
+                android:textAppearance="@*android:style/TextAppearance.Leanback.FormWizard" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_weight="1"
+                    android:text="Date Bought"
+                    android:textAppearance="@*android:style/TextAppearance.Leanback.FormWizard.Medium" />
+
+                <ImageButton
+                    android:id="@+id/calendarIcon"
+                    android:layout_width="10dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:paddingRight="55dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:tint="@color/colorPrimaryDark"
+
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lifespan"
+                android:textAppearance="@*android:style/TextAppearance.Leanback.FormWizard.Large" />
+
+            <SeekBar
+                android:id="@+id/seekBar4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="40dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Additional Details" />
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>
