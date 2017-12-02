@@ -13,6 +13,7 @@
  Formatting Guideline:
  Name of food is all caps
  */
+/*
 import java.util.Locale;
 import java.util.Scanner;
 import java.io.*;
@@ -51,4 +52,4 @@ public class addFood {
 	//        System.out.printf("%d %d %d\n", apple.expiryDate.year, apple.expiryDate.month, apple.expiryDate.day);
         }
     }
-}
+}*/
